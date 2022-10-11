@@ -1,5 +1,11 @@
 <?php
 /**
+ * custom posts_search
+ *
+ * @package *****
+ */
+
+/**
  * 空欄検索・スペース検索を無効化 
  */
 add_filter(
@@ -24,8 +30,8 @@ add_action(
 		}
 		if( $query->is_search ) {
 			$formtxt = $query->get( 's' );
-			$formtxt = str_replace('　',' ',$formtxt);
-			$query->set('s',$formtxt);
+			$formtxt = str_replace( '　',' ',$formtxt );
+			$query->set( 's',$formtxt );
 		}
 	}
 );
